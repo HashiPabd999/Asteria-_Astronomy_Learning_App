@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { background: #05060f; color: #f4f4fb; }
+body { min-height: 100dvh; -webkit-font-smoothing: antialiased; }
+
+/* Starfield built from layered radial gradients: no image file needed */
+.starfield {
+  position: fixed; inset: 0; z-index: -1;
+  background:
+    radial-gradient(1.5px 1.5px at 12% 18%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 28% 62%, #cfc8ff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 44% 30%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 63% 12%, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 78% 44%, #b7a9ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 88% 78%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 20% 86%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 55% 70%, #ffd9e6 50%, transparent 51%),
+    radial-gradient(ellipse at 50% 0%, #17154a 0%, #05060f 60%);
+  background-size: 340px 340px, 260px 260px, 420px 420px, 300px 300px, 520px 520px,
+    380px 380px, 460px 460px, 360px 360px, 100% 100%;
+}
+
+:focus-visible { outline: 2px solid #a99bff; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
